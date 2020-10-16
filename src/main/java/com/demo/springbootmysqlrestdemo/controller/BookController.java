@@ -66,4 +66,12 @@ public class BookController {
 
         return ResponseEntity.ok().build();
     }
+
+    // Delete all Notes
+    @DeleteMapping("/books")
+    public ResponseEntity<?> deleteBooks() {
+        bookRepository.	deleteAllInBatch();
+
+        return ResponseEntity.ok().build();
+    }
 }
